@@ -1,3 +1,6 @@
+# plot bbox for oriented bbox detection
+# bbox information should be saved in a txt file and follow the below format in each row: 
+# class x1 y1 x2 y2 x3 y3 x4 y4
 import cv2 as cv
 import os
 
