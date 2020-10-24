@@ -14,7 +14,7 @@ label_root_list=os.listdir(label_root_dir)
 for i,name in enumerate(label_root_list):
     print ('plot '+name)
     
-    img=cv.imread(image_root_dir+'/'+name[:-4]+'.tif')
+    img=cv.imread(image_root_dir+'/'+name[:-4]+'.png')
     f = open(label_root_dir+'/'+name,'r')
     for line in open(label_root_dir+'/'+name):
             
@@ -48,5 +48,5 @@ for i,name in enumerate(label_root_list):
         cv.putText(img, class_name_config, (coordinate[0], coordinate[1]), font, 0.5, (0, 0, 255), 1)
 
     f.close()
-    cv.imwrite(labeled_image_root_dir+'/'+name[:-4]+'.tif', img)
+    cv.imwrite(labeled_image_root_dir+'/'+name[:-4]+'.png', img)
     
